@@ -1,0 +1,225 @@
+/* General body styling for full-page background */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000; /* Black background for the whole page */
+  font-family: 'Arial', sans-serif; /* Or your preferred font */
+  color: #fff; /* Default text color */
+}
+
+.landing-page-x-container {
+  display: flex;
+  min-height: 100vh; /* Make it take full viewport height */
+  color: #fff; /* White text for the whole page */
+}
+
+.landing-page-x-left {
+  flex: 1; /* Takes half the width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000; /* Black background */
+}
+
+.landing-page-x-large-logo {
+  font-size: 300px; /* Adjust size for the large X */
+  font-weight: bold;
+  color: #fff; /* White X */
+  padding-right: 290px;
+  /* If using an SVG/PNG: */
+  /* max-width: 80%; */
+  /* max-height: 80%; */
+  /* object-fit: contain; */
+}
+
+.landing-page-x-right {
+  flex: 1; /* Takes half the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px; /* Padding around the content */
+  margin-right: -400px;
+  box-sizing: border-box; /* Include padding in width */
+  background-color: #000; /* Black background */
+}
+
+.landing-page-x-heading {
+  font-size: 60px; /* Large "Happening now" */
+  font-weight: 700; /* Extra bold */
+  margin-bottom: 5px;
+  line-height: 1; /* Adjust line height for dense text */
+}
+
+.landing-page-x-subheading {
+  font-size: 31px; /* "Join today." */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.landing-page-x-signup-options {
+  max-width: 320px; /* Limit width of sign-up options */
+  width: 100%;
+  margin-bottom: 50px; /* Space before "Already have an account?" */
+}
+
+.landing-page-x-social-signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 9999px;
+  border: 1px solid #555; /* Light grey border */
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.landing-page-x-social-signup-button:hover {
+  background-color: #eee;
+}
+
+.landing-page-x-social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Reusing the or-divider styles from previous components */
+.landing-page-x-or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+  position: relative;
+}
+
+.landing-page-x-or-divider::before,
+.landing-page-x-or-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #333;
+}
+
+.landing-page-x-or-text {
+  padding: 0 10px;
+  background-color: #000;
+  color: #777;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-page-x-create-account-button {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #1da1f2; /* Twitter blue */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 10px; /* Space before terms text */
+}
+
+.landing-page-x-create-account-button:hover {
+  background-color: #1a8cd8; /* Slightly darker blue on hover */
+}
+
+.landing-page-x-terms-text {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.landing-page-x-link {
+  color: #1da1f2; /* Twitter blue for links */
+  text-decoration: none;
+}
+
+.landing-page-x-link:hover {
+  text-decoration: underline;
+}
+
+.landing-page-x-signin-section {
+  margin-top: -40px; /* Space from above content */
+  padding-top: 10px;
+  border-top: 1px solid #333; /* Separator line */
+  max-width: 310px; /* Match width of sign-up options */
+  width: 100%;
+}
+
+.landing-page-x-signin-section h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.landing-page-x-signin-button {
+  display: block; /* Make it block-level to take full width */
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 9999px;
+  border: 1px solid #555; /* White border */
+  background-color: #000; /* Black background */
+  color: #1da1f2; /* Twitter blue text */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center; /* Center text for the link */
+  text-decoration: none; /* Remove underline for link */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.landing-page-x-signin-button:hover {
+  background-color: #0d1a29; /* Slightly darker black on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .landing-page-x-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+  }
+
+  .landing-page-x-left {
+    min-height: 200px; /* Give some height to the logo section */
+    flex: none; /* Don't let it grow */
+    padding-top: 40px;
+  }
+
+  .landing-page-x-large-logo {
+    font-size: 150px; /* Smaller logo on small screens */
+  }
+
+  .landing-page-x-right {
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    padding: 30px 20px;
+  }
+
+  .landing-page-x-heading {
+    font-size: 40px;
+    margin-top: 0px;
+  }
+
+  .landing-page-x-subheading {
+    font-size: 24px;
+  }
+
+  .landing-page-x-terms-text {
+    padding: 0 10px; /* Add some padding to terms text */
+  }
+
+  .landing-page-x-signup-options,
+  .landing-page-x-signin-section {
+    max-width: 100%; /* Allow full width on small screens */
+  }
+}

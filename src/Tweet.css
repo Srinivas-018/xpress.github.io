@@ -1,0 +1,131 @@
+/* Individual Tweet */
+.tweet-x {
+  padding: 16px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tweet-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #333; /* Placeholder color */
+  flex-shrink: 0;
+}
+
+.tweet-user-info {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+.tweet-user-name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.tweet-user-handle, .tweet-time {
+  color: #777;
+}
+
+.tweet-options {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tweet-options:hover {
+  background-color: #1a1a1a;
+  color: #1da1f2; /* Blue on hover */
+}
+
+.tweet-content {
+  margin-left: 58px; /* Align with tweet text after avatar */
+}
+
+.tweet-content p {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.tweet-media-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Limit media width */
+  height: 280px; /* Aspect ratio for 16:9 video */
+  margin-top: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #222; /* Placeholder background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweet-media-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+
+.tweet-stats {
+  margin-left: 58px;
+  font-size: 14px;
+  color: #777;
+}
+
+.tweet-stats .stat-item {
+  margin-right: 15px;
+}
+
+.tweet-actions {
+  display: flex;
+  justify-content: space-around; /* Distribute actions evenly */
+  margin-left: 58px;
+  margin-top: 5px;
+}
+
+.tweet-actions .action-button {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tweet-actions .action-button:hover {
+  background-color: #1a1a1a;
+  color: #1da1f2; /* Blue on hover */
+}

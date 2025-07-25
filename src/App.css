@@ -1,38 +1,265 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* General Body and HTML styling (optional, but good for context) */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Or your preferred font */
+  background-color: #497174; /* A dark background to match the image's surrounding */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sign-in X Overlay */
+.signin-x-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 26, 26, 0.6); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: 'Arial', sans-serif; /* You might want to customize this */
+}
+
+/* Sign-in X Container (the modal itself) */
+.signin-x-container {
+  background-color: #000; /* Black background for the modal */
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  height: 100%;
+  max-height: 600px; /* Adjust as needed */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  color: #fff; /* White text */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+  position: relative; /* This is crucial for .signin-x-warning-modal's bottom: 0 to work */
+  overflow: hidden;
+}
+
+/* Close Button */
+.signin-x-close-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0; /* Remove default button padding */
+}
+
+/* X Logo */
+.signin-x-logo {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: -30px;
+  color: #fff; /* White 'X' logo */
+}
+
+/* Title "Sign in to X" */
+.signin-x-title {
+  font-size: 31px; /* As per the image */
+  font-weight: bold;
+  
+}
+
+/* Social Sign-in Buttons (Google, Apple) */
+.signin-x-social-button {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60%; /* Takes 80% of container width */
+  padding: 12px 20px;
+  margin: 0 auto 15px auto; /* Center the buttons with bottom margin */
+  border-radius: 9999px; /* Fully rounded corners */
+  border: 1px solid #555; /* Light grey border */
+  background-color: #fff; /* White background for social buttons */
+  color: #000; /* Black text for social buttons */
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.signin-x-social-button:hover {
+  background-color: #d0cdcd; /* Lighter grey on hover */
 }
 
-@keyframes App-logo-spin {
+/* Social Icon within buttons */
+.signin-x-social-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  mix-blend-mode: multiply;
+}
+
+/* "or" Divider */
+.signin-x-or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto; /* Center the divider */
+  width: 60%; /* Match width of other elements */
+  position: relative; /* For the line */
+}
+
+.signin-x-or-divider::before,
+.signin-x-or-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #333; /* Darker grey line */
+}
+
+.signin-x-or-text {
+  padding: 0 10px;
+  background-color: #000; /* Match container background */
+  color: #777; /* Grey 'or' text */
+  position: relative;
+  z-index: 1; /* Ensure text is above the line */
+}
+
+/* Input Field */
+.signin-x-input-field {
+  width: 60%;
+  padding: 16px 12px;
+  margin: 0 auto 20px auto; /* Center the input field with bottom margin */
+  border-radius: 6px;
+  border: 1px solid #555; /* Light grey border */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding in width */
+  display: block; /* Ensure it takes full width and centers */
+}
+
+.signin-x-input-field::placeholder {
+  color: #888; /* Lighter grey for placeholder text */
+}
+
+.signin-x-input-field:focus {
+  outline: none;
+  border-color: #1da1f2; /* Blue border on focus */
+}
+
+/* Next Button */
+.signin-x-next-button {
+  width: 60%;
+  height: 45px;
+  padding: 16px 20px;
+  margin: 0 auto 20px auto; /* Center the button with bottom margin */
+  border-radius: 9999px;
+  border: none;
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: block; /* Ensure it takes full width and centers */
+}
+
+.signin-x-next-button:hover {
+  background-color: #d0cdcd;
+}
+
+.signin-x-next{
+   /* Make it block-level to take full width */
+  display: block;
+  margin: 0 auto 20px auto; /* Center the link with bottom margin */
+  width: 60%;
+  padding: 12px 10px;
+  border-radius: 9999px;
+  border: 1px solid #555; /* White border */
+  background-color: #fff; /* Black background */
+  color: #1da1f2; /* Twitter blue text */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center; /* Center text for the link */
+  text-decoration: none; /* Remove underline for link */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Forgot Password Button */
+.signin-x-forgot-password-button {
+  background-color: transparent;
+  border: 1px solid #555; /* Light grey border */
+  color: #fff; /* White text */
+  padding: 16px 20px;
+  width: 60%;
+  margin: 0 auto 40px auto; /* Center the button with bottom margin */
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: block; /* Ensure it takes full width and centers */
+}
+
+.signin-x-forgot-password-button:hover {
+  background-color: #2e2e2e; /* Slightly darker on hover */
+}
+
+/* Sign up text */
+.signin-x-signup-text {
+  color: #777; /* Grey text for "Don't have an account?" */
+  font-size: 15px;
+}
+
+.signin-x-forgot-text {
+  color: #777; /* Grey text for "Forgot password?" */
+  font-size: 15px;
+  margin-top: -10px; /* Space above the link */
+  margin-left: -200px;
+  margin-bottom: 100px;
+}
+
+/* Sign up Link */
+.signin-x-signup-link {
+  color: #1da1f2; /* Twitter blue for "Sign up" */
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.signin-x-signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Existing styles... */
+
+/* Warning Modal/Message Styling */
+.signin-x-warning-modal {
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the parent container */
+  left: 0;
+  right: 0;
+  background-color: #1da1f2; /* Twitter blue background (or similar as in the image) */
+  color: #fff; /* White text */
+  padding: 16px 24px;
+  font-size: 15px;
+  text-align: left;
+  border-bottom-left-radius: 16px; /* Match container border radius */
+  border-bottom-right-radius: 16px; /* Match container border radius */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow above it */
+  animation: slideUp 0.3s ease-out; /* Add a simple animation */
+}
+
+/* Optional: Animation for appearing warning */
+@keyframes slideUp {
   from {
-    transform: rotate(0deg);
+    transform: translateY(100%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
   }
 }

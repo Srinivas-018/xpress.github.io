@@ -1,0 +1,436 @@
+/* Central Feed */
+.central-feed-x {
+  flex-grow: 1; /* Takes up remaining space */
+  max-width: 100vh; /* Fixed width for tweet feed */
+  border-left: 1px solid #333; /* Separator lines */
+  border-right: 1px solid #333;
+  height: 100%; /* Ensure it takes full height */
+  margin-top:250px;
+}
+
+.central-feed-x-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #333;
+  position: sticky; /* Make header sticky */
+  top: 0;
+  background-color: #000000d0; /* Semi-transparent black for scroll effect */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: 100; /* Ensure it stays on top */
+}
+
+.central-feed-x-tabs {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.central-feed-x-tabs .tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.central-feed-x-tabs .tab:hover {
+  color: #fff;
+  background-color: #1a1a1a; /* Slight background on hover */
+}
+
+.central-feed-x-tabs .tab.active {
+  color: #fff;
+}
+
+.central-feed-x-tabs .tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background-color: #1da1f2; /* Blue active indicator */
+  border-radius: 2px;
+}
+
+.search-icon-header {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.search-icon-header:hover {
+  background-color: #1a1a1a;
+}
+
+.tweet-composer {
+  display: flex;
+  flex-direction: column;
+  margin-top:20px;
+  padding: 16px;
+  border-bottom: 1px solid #333;
+}
+
+.tweet-composer .user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #333;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.tweet-composer textarea {
+  width: 100%;
+  min-height: 50px;
+  background: none;
+  border: none;
+  resize: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.tweet-composer textarea::placeholder {
+  color: #777;
+}
+
+.tweet-composer textarea:focus {
+  outline: none;
+}
+
+.composer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.composer-icons  {
+  display: flex;
+  justify-content: space-between; /* Distribute actions evenly */
+  margin-left: -5px;
+}
+
+.composer-icons .actions{
+  background: none;
+  border: none;
+  ;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.composer-icons .action:hover {
+  background-color: #1a1a1a;
+  color: #1da1f2; /* Blue on hover */
+}
+
+.post-button-composer {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.post-button-composer:hover {
+  background-color: #1a8cd8;
+}
+
+.feed-divider {
+  height: 12px;
+  background-color: #0b0b0b; /* Slightly lighter black for divider */
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+}
+
+/* Right Sidebar */
+.right-sidebar-x {
+  width: 350px; /* Fixed width */
+  border:solid 1px #222;
+  padding: 12px 16px;
+  align-self: center;
+  margin-top: 280px;
+  height: 100%;
+  margin-left: 20px; /* Space between feed and right sidebar */
+  margin-right: -100px; /* Align with the edge of the viewport */
+  /*overflow-y: scroll; /*Enable scrolling for content within sidebar */
+  box-sizing: border-box;
+}
+
+.search-bar-right {
+  display: flex;
+  align-items: center;
+  background-color: #222; /* Dark grey background */
+  border-radius: 9999px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.search-bar-right input {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+.search-bar-right input::placeholder {
+  color: #777;
+}
+
+.search-bar-right input:focus {
+  outline: none;
+}
+
+.section {
+  background-color: #1a1a1a; /* Darker background for sections */
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.subscribe-premium-section p {
+  font-size: 15px;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.subscribe-button {
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.subscribe-button:hover {
+  background-color: #1a8cd8;
+}
+
+.whats-happening-section .trend-item {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.whats-happening-section .trend-item:hover {
+  background-color: #0b0b0b; /* Slight hover effect */
+}
+
+.trend-category {
+  font-size: 13px;
+  color: #777;
+}
+
+.trend-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.trend-posts {
+  font-size: 14px;
+  color: #777;
+}
+
+.show-more-link {
+  color: #1da1f2;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 10px;
+  display: block; /* Make it a block element to take space */
+  padding-top: 10px; /* Padding for click area */
+}
+
+.show-more-link:hover {
+  text-decoration: underline;
+}
+
+.follow-suggestion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #222; /* Separator for follow suggestions */
+}
+
+.follow-suggestion:last-child {
+  border-bottom: none;
+}
+
+.follow-suggestion .user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #333;
+  flex-shrink: 0;
+}
+
+.follow-suggestion .user-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.follow-suggestion .user-name {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.follow-suggestion .user-handle {
+  color: #777;
+  font-size: 14px;
+}
+
+.follow-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+.follow-button:hover {
+  background-color: #ddd;
+}
+
+.footer-links {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  flex-wrap: wrap; /* Allow links to wrap */
+  gap: 8px 12px; /* Row and column gap */
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #7e6cf4;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-links span {
+  width: 100%; /* Make copyright span take full width */
+  margin-top: 10px;
+}
+
+/* Floating Post Button (for mobile/tablet views) */
+.floating-post-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1da1f2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 500;
+  display: none; /* Hidden by default, show on smaller screens */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .right-sidebar-x {
+    display: none; /* Hide right sidebar on smaller screens */
+  }
+  .homepage-x-layout {
+    justify-content: center; /* Center main content */
+  }
+}
+
+@media (max-width: 768px) {
+  .left-sidebar-x {
+    width: 60px; /* Collapse left sidebar */
+    align-items: center;
+  }
+  .left-sidebar-x-nav-item span:not(.icon) { /* Hide text in nav items */
+    display: none;
+  }
+  .left-sidebar-x-post-button {
+    width: 48px; /* Make post button round */
+    height: 48px;
+    padding: 0;
+    font-size: 0; /* Hide text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .left-sidebar-x-post-button::after {
+    content: 'Post'; /* Use CSS to show 'Post' only on desktop if possible */
+    font-size: 1rem; /* Show icon for mobile */
+  }
+  .left-sidebar-x-post-button svg {
+    display: block; /* Show SVG icon */
+    font-size: 24px;
+  }
+  .left-sidebar-x-user-profile {
+    padding: 8px;
+  }
+  .left-sidebar-x-user-profile .user-info,
+  .left-sidebar-x-user-profile .user-options {
+    display: none; /* Hide user text info */
+  }
+  .left-sidebar-x-logo {
+    font-size: 24px;
+  }
+
+  .floating-post-button {
+    display: flex; /* Show floating button on small screens */
+  }
+
+  .central-feed-x {
+    border-left: none;
+    border-right: none;
+  }
+}

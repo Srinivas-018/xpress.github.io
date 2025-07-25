@@ -1,0 +1,17 @@
+/* General Layout */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000; /* Black background for the whole page */
+  font-family: 'Arial', sans-serif; /* Consistent font */
+  color: #fff; /* Default text color */
+}
+
+.homepage-x-layout {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between; /* Distribute space */
+  max-width: 1300px; /* Limit overall width of the layout */
+  margin: 0 auto; /* Center the layout */
+}
