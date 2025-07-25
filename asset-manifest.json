@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/xpress.github.io/static/css/main.d7447b04.css",
+    "main.js": "/xpress.github.io/static/js/main.5b7b0660.js",
+    "static/js/453.fbc4bb8b.chunk.js": "/xpress.github.io/static/js/453.fbc4bb8b.chunk.js",
+    "index.html": "/xpress.github.io/index.html",
+    "main.d7447b04.css.map": "/xpress.github.io/static/css/main.d7447b04.css.map",
+    "main.5b7b0660.js.map": "/xpress.github.io/static/js/main.5b7b0660.js.map",
+    "453.fbc4bb8b.chunk.js.map": "/xpress.github.io/static/js/453.fbc4bb8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7447b04.css",
+    "static/js/main.5b7b0660.js"
+  ]
+}
