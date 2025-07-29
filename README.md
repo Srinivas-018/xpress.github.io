@@ -16,25 +16,25 @@ This is a simple Node.js + Express web server with a React frontend.
 
 ### Installation
 1. Clone the repository:
-   ```sh
+
    git clone <your-repo-url>
    cd <repo-folder>
-   ```
+
 2. Install dependencies:
-   ```sh
+   
    npm install
-   ```
+   
 
 ### Running the Server
-```sh
+
 node server.js
-```
+
 
 ### Running the React App
 If using Create React App, run:
-```sh
+
 npm start
-```
+
 
 ## Project Structure
 ```

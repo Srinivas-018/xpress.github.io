@@ -103,9 +103,7 @@ const CentralFeed = () => {
       </div>
 
       <div className="footer-links">
-        <a href="#">Terms of Service</a> <a href="#">Privacy Policy</a> <a href="#">Cookie Policy</a>
-        <a href="#">Accessibility</a> <a href="#">Ads info</a> <a href="#">More...</a>
-        <span>© 2025 X Corp.</span>
+        <span>© 2025 Xpress.</span>
       </div>
     </div>
     </>

@@ -7,15 +7,7 @@ const SignInX = () => {
   const [showWarning, setShowWarning] = useState(false); 
   const navigate = useNavigate();
 
-  const handleSignInWithGoogle = () => {
-    console.log('Sign in with Google clicked');
-    // Implement Google sign-in logic here
-  };
-
-  const handleSignInWithApple = () => {
-    console.log('Sign in with Apple clicked');
-    // Implement Apple sign-in logic here
-  };
+  
 
   const handleNext = () => {
     if (identifier.trim()) { // Check if identifier is not empty or just whitespace
@@ -39,28 +31,7 @@ const SignInX = () => {
         <button className="signin-x-close-button">x</button> {/* Close button */}
         <div className="signin-x-logo">Xpress</div> {/* X logo */}
         <h2 className="signin-x-title">Sign in to Xpress</h2>
-
-        <button className="signin-x-social-button" onClick={handleSignInWithGoogle}>
-          <img
-            src="https://developers.google.com/identity/images/g-logo.png" 
-            alt="Google"
-            className="signin-x-social-icon"
-          />
-          Sign in with Google
-        </button>
-
-        <button className="signin-x-social-button" onClick={handleSignInWithApple}>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
-            alt="Apple"
-            className="signin-x-social-icon"
-          />
-          Sign in with Apple
-        </button>
-
-        <div className="signin-x-or-divider">
-          <span className="signin-x-or-text">or</span>
-        </div>
+        
 
         <input
           type="email"

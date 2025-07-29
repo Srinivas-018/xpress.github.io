@@ -10,7 +10,7 @@ function App() {
   // In a real app, you might manage the email state higher up or in a global store
   // For this example, we'll pass it via route state.
   return (
-    <Router>
+    <Router basename="/xpress.github.io">
       <div className="App">
         <Routes>
           <Route path="/" element={<LandingPage />} />
