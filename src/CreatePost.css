@@ -1,0 +1,118 @@
+/* General Body and HTML styling */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* A light grey background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-post-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* Optional: slight overlay */
+}
+
+/* Create Post Container */
+.create-post-container {
+  background-color: #090909;
+  border: solid 1px #ddd;
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #000;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header section with avatar and textarea */
+.create-post-header {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+}
+
+.create-post-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.create-post-textarea {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 20px;
+  resize: none;
+  height: 120px;
+  font-family: 'Arial', sans-serif;
+}
+
+.create-post-textarea::placeholder {
+  color: #555;
+}
+
+.create-post-textarea:focus {
+  outline: none;
+}
+
+/* Footer with actions and post button */
+.create-post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.create-post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-icon-button {
+  background: none;
+  border: none;
+  color: #1da1f2;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.action-icon-button:hover {
+  background-color: #e8f5fe;
+}
+
+/* Post Button */
+.create-post-submit-button {
+  padding: 8px 20px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #1da1f2;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.create-post-submit-button:hover {
+  background-color: #1a91da;
+}
+
+.create-post-submit-button:disabled {
+  background-color: #a9d9f7;
+  cursor: not-allowed;
+}

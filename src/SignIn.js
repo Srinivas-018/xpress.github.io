@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import './App.css'; // Import the CSS file
 
 const SignInX = () => {
@@ -20,10 +20,7 @@ const SignInX = () => {
     }
   };
 
-  const handleForgotPassword = () => {
-    console.log('Forgot password clicked');
-    // Implement forgot password logic
-  };
+  
 
   return (
     <div className="signin-x-overlay">
@@ -49,12 +46,10 @@ const SignInX = () => {
           Next
         </button>
 
-        <button className="signin-x-forgot-password-button" onClick={handleForgotPassword}>
-          Forgot password?
-        </button>
+        
 
         <div className="signin-x-signup-text">
-          Don't have an account? <a href="#" className="signin-x-signup-link">Sign up</a>
+          Don't have an account? <Link to="/signup" className="signin-x-signup-link">SignUp</Link>
         </div>
         {/* Warning Modal/Message */}
         {showWarning && (

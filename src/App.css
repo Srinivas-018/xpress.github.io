@@ -4,7 +4,7 @@ body, html, #root {
   padding: 0;
   height: 100%;
   font-family: 'Arial', sans-serif; /* Or your preferred font */
-  background-color: #497174; /* A dark background to match the image's surrounding */
+  background-color: #000000; /* A dark background to match the image's surrounding */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,11 +155,12 @@ body, html, #root {
   width: 60%;
   height: 45px;
   padding: 16px 20px;
+  margin-bottom:-100px;
   margin: 0 auto 20px auto; /* Center the button with bottom margin */
   border-radius: 9999px;
   border: none;
-  background-color: #fff; /* White background */
-  color: #000; /* Black text */
+  background-color: #3507ee; /* White background */
+  color: #ffffff; /* Black text */
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -167,7 +168,7 @@ body, html, #root {
 }
 
 .signin-x-next-button:hover {
-  background-color: #d0cdcd;
+  background-color: #050aa4;
 }
 
 .signin-x-next{
@@ -178,7 +179,7 @@ body, html, #root {
   padding: 12px 10px;
   border-radius: 9999px;
   border: 1px solid #555; /* White border */
-  background-color: #fff; /* Black background */
+  background-color: #000000; /* Black background */
   color: #1da1f2; /* Twitter blue text */
   font-size: 16px;
   font-weight: bold;

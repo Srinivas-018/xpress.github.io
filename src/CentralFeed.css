@@ -1,11 +1,13 @@
 /* Central Feed */
 .central-feed-x {
   flex-grow: 1; /* Takes up remaining space */
-  max-width: 100vh; /* Fixed width for tweet feed */
+  max-width: 600px; /* Fixed width for tweet feed */
   border-left: 1px solid #333; /* Separator lines */
   border-right: 1px solid #333;
+  border-top: 1px solid #333;
   height: 100%; /* Ensure it takes full height */
-  margin-top:250px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .central-feed-x-header {
@@ -172,10 +174,10 @@
   border:solid 1px #222;
   padding: 12px 16px;
   align-self: center;
-  margin-top: 280px;
   height: 100%;
-  margin-left: 20px; /* Space between feed and right sidebar */
-  margin-right: -100px; /* Align with the edge of the viewport */
+  margin-left: 50px; /* Space between feed and right sidebar */
+ /* Align with the edge of the viewport */
+  margin-top: -100px;
   /*overflow-y: scroll; /*Enable scrolling for content within sidebar */
   box-sizing: border-box;
 }
