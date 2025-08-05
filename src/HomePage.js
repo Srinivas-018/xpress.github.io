@@ -5,6 +5,7 @@ import './HomePage.css'; // Main stylesheet
 // Import placeholder sub-components (we'll define these below)
 import LeftSidebar from './LeftSidebar';
 import CentralFeed from './CentralFeed';
+import RightSidebar from './RightSidebar';
 
 
 
@@ -16,6 +17,8 @@ const HomePage = () => {
 
       {/* Central Content Feed */}
       <CentralFeed />
+      {/* Right Sidebar */}
+      <RightSidebar />
 
       {/* Floating Action Button for smaller screens (example, not fully in image) */}
       <button className="floating-post-button">

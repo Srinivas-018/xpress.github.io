@@ -62,10 +62,7 @@ const EnterPassword = ({ placeholder = "Enter your password" }) => {
           </div>
         </div>
 
-        <div className="signin-x-forgot-text" onClick={handleForgotPassword}>
-           <a href="#" className="signin-x-signup-link">Forgot password?</a>
-        </div>
-
+        
         <Link to='/home' className="signin-x-next" onClick={handleLogin}> Log in </Link>
 
         <div className="signin-x-signup-text">

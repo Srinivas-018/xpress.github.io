@@ -2,7 +2,6 @@
 .left-sidebar-x {
   width: 275px; /* Fixed width as per X layout */
   padding: 12px 16px;
-  margin-left:-200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Push user profile to bottom */

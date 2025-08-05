@@ -11,7 +11,7 @@ body, html, #root {
 .landing-page-x-container {
   display: flex;
   min-height: 100vh; /* Make it take full viewport height */
-  color: #fff; /* White text for the whole page */
+  color: #fff; /* White text for the whole page */;
 }
 
 .landing-page-x-left {
@@ -19,7 +19,6 @@ body, html, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: #000; /* Black background */
 }
 
@@ -27,7 +26,8 @@ body, html, #root {
   font-size: 300px; /* Adjust size for the large X */
   font-weight: bold;
   color: #fff; /* White X */
-  padding-right: 290px;
+  padding-right: 400px;
+  padding-left: 300px;
   /* If using an SVG/PNG: */
   /* max-width: 80%; */
   /* max-height: 80%; */
@@ -40,7 +40,6 @@ body, html, #root {
   flex-direction: column;
   justify-content: center;
   padding: 40px; /* Padding around the content */
-  margin-right: -400px;
   box-sizing: border-box; /* Include padding in width */
   background-color: #000; /* Black background */
 }
@@ -222,4 +221,4 @@ body, html, #root {
   .landing-page-x-signin-section {
     max-width: 100%; /* Allow full width on small screens */
   }
-}
+} 
